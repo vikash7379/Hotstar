@@ -3,16 +3,18 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
 import "firebase/storage";
 
-
 const firebaseConfig = {
-    apiKey: "AIzaSyB_5VaTPTtlCPAUqCstxOkfPf65NXl8EDo",
-    authDomain: "disneyplus-3c1b0.firebaseapp.com",
-    projectId: "disneyplus-3c1b0",
-    storageBucket: "disneyplus-3c1b0.appspot.com",
-    messagingSenderId: "804880453525",
-    appId: "1:804880453525:web:824f1c2f371634936a309c",
-    measurementId: "G-9P1QWSSPQM"
-  };
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+};
+
+// Rest of the code remains the same
+
 
   // Initialize Firebase
   const firebaseApp = firebase.initializeApp(firebaseConfig);
